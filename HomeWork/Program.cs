@@ -1,4 +1,6 @@
-﻿int NumberOne(int num, int NumberOfFirstNumbers)
+﻿void palindromeCheck()
+{
+int NumberOne(int num, int NumberOfFirstNumbers)
 {
     while (num / Math.Pow(10, NumberOfFirstNumbers) > 1)
     {
@@ -17,11 +19,11 @@ if (number > 9999 && number < 100000)
     int y = NumberOne(number, 2);
     if (x / 10 == y % 10 && x % 10 == y / 10)
     {
-        Console.WriteLine("Число является полиндромом");
+        Console.WriteLine("Число является палиндромом");
     }
     else
     {
-        Console.WriteLine("Число не является полиндромом");
+        Console.WriteLine("Число не является палиндромом");
     }
 }
 
@@ -29,3 +31,23 @@ else
 {
     Console.WriteLine("Введите число больше 9999 и меньше 100000");
 }
+}
+//palindromeCheck();
+void distanceBetweenPoints()
+{
+    Console.WriteLine("Введите координаты X точки A");
+    int aPointX = int.Parse(Console.ReadLine());
+    Console.WriteLine("Введите координаты Y точки A");
+    int aPointY = int.Parse(Console.ReadLine());
+    Console.WriteLine("Введите координаты Z точки A");
+    int aPointZ = int.Parse(Console.ReadLine());
+    Console.WriteLine("Введите координаты X точки B");
+    int bPointX = int.Parse(Console.ReadLine());
+    Console.WriteLine("Введите координаты Y точки B");
+    int bPointY = int.Parse(Console.ReadLine());
+    Console.WriteLine("Введите координаты Z точки B");
+    int bPointZ = int.Parse(Console.ReadLine());
+    double distance = Math.Sqrt(Math.Pow((bPointX - aPointX),2)+Math.Pow((bPointY - aPointY),2)+Math.Pow((bPointZ - aPointZ),2));
+    Console.WriteLine("Расстояние между точками  " + distance);
+}
+//distanceBetweenPoints();
