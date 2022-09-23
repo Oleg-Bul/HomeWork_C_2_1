@@ -32,7 +32,7 @@ else
     Console.WriteLine("Введите число больше 9999 и меньше 100000");
 }
 }
-//palindromeCheck();
+palindromeCheck();
 void distanceBetweenPoints()
 {
     Console.WriteLine("Введите координаты X точки A");
@@ -50,4 +50,16 @@ void distanceBetweenPoints()
     double distance = Math.Sqrt(Math.Pow((bPointX - aPointX),2)+Math.Pow((bPointY - aPointY),2)+Math.Pow((bPointZ - aPointZ),2));
     Console.WriteLine("Расстояние между точками  " + distance);
 }
-//distanceBetweenPoints();
+distanceBetweenPoints();
+void CubeNumbers()
+{
+    Console.WriteLine("Введите число");
+    int numberN = int.Parse(Console.ReadLine());
+    int index = 1;
+    while (index < numberN+1)
+    {
+        Console.WriteLine(Math.Pow(index,3));
+        index++;
+    }
+}
+CubeNumbers();
